@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>山社歷史 | 中原登山社</title>
+    <link rel="preload" href="https://i.postimg.cc/3xKj68f0/CYMC-qu-bei.png" as="image">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="brand-link">
+            <img src="https://i.postimg.cc/3xKj68f0/CYMC-qu-bei.png" alt="中原登山社 LOGO" class="brand-logo" width="75" height="50">
+            <span class="brand-text">中原登山社</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="history.html">山社歷史</a></li>
+            <li><a href="gallery.html">隊伍回顧</a></li>
+            <li><a href="schedule.html">這學期隊伍</a></li>
+            <li><a href="join.html">加入山社</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <h1>山社歷史</h1>
+        <p>那些年，我們一起爬過的山</p>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>創社源起</h2>
+            <p>這裡可以填寫中原登山社創立的故事、初衷，以及歷屆學長姐傳承下來的精神...</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 中原登山社 版權所有</p>
+    </footer>
+
+</body>
+</html>
