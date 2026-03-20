@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁 | 中原大學登山社</title>
+    <link rel="preload" href="https://i.postimg.cc/3xKj68f0/CYMC-qu-bei.png" as="image">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="brand-link">
+            <img src="https://i.postimg.cc/3xKj68f0/CYMC-qu-bei.png" alt="中原登山社 LOGO" class="brand-logo" width="75" height="50">
+            <span class="brand-text">中原登山社</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="history.html">山社歷史</a></li>
+            <li><a href="gallery.html">隊伍回顧</a></li>
+            <li><a href="schedule.html">這學期隊伍</a></li>
+            <li><a href="join.html">加入山社</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>探索極限，登峰造極</h1>
+        <p>一步一腳印，看見台灣之美</p>
+        <a href="join.html" class="btn-primary">立即加入</a>
+    </header>
+
+    <main class="container">
+        <section class="intro-section">
+            <h2>歡迎來到中原大學登山社</h2>
+            <p>我們是一群熱愛山林、挑戰自我的夥伴。在這裡，你可以找到志同道合的朋友，一起探索台灣的百岳與秘境。</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 中原大學登山社 版權所有</p>
+    </footer>
+
+</body>
+</html>
