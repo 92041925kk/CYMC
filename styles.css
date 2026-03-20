@@ -1,0 +1,210 @@
+/* =========================================
+   styles.css - 中原登山社 全站共用樣式
+   ========================================= */
+
+:root {
+    --primary-color: #1A432D; /* 墨綠色 (導覽列/頁尾/強調色) */
+    --bg-color: #FFFFFF;      /* 主體白色 */
+    --text-dark: #1A432D;     /* 墨綠色文字 */
+    --text-light: #FFFFFF;    /* 白色文字 */
+    --accent-color: #E2C044;  /* 晨曦黃 (按鈕或懸停效果) */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, '微軟正黑體', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    line-height: 1.6;
+    padding-top: 80px; /* 預留給上方固定導覽列的空間 */
+}
+
+/* --- 導覽列 Navbar --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* 左上角品牌區 (點擊回首頁) */
+.brand-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 15px; /* 圖片與文字的間距 */
+    transition: transform 0.2s;
+}
+
+.brand-link:hover {
+    transform: scale(1.02);
+}
+
+/* 新增：LOGO 圖片設定 */
+/* 更新：LOGO 圖片設定 */
+.brand-logo {
+    height: 50px; 
+    width: 75px; /* 強制預留寬度，防止載入時版面跳動 */
+    object-fit: contain; /* 確保圖片比例不會變形 */
+    filter: brightness(0) invert(1); 
+    
+    /* 選擇性加入：讓圖片載入時有非常短暫的淡入效果，掩飾濾鏡轉換的瞬間 */
+    animation: fadeIn 0.5s ease-in-out; 
+}
+/* 新增：LOGO 旁的文字設定 */
+.brand-text {
+    color: var(--text-light);
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* 新增一個淡入動畫 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
+/* 導覽列連結 */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* --- 頁面通用元素 --- */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    min-height: 50vh;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #d1b038;
+    transform: translateY(-2px);
+}
+
+/* --- 首頁主視覺 Hero --- */
+.hero {
+    background: linear-gradient(rgba(26, 67, 45, 0.7), rgba(26, 67, 45, 0.7)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80') center/cover;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-light);
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.intro-section {
+    text-align: center;
+}
+
+.intro-section h2 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+/* --- 頁尾 Footer --- */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+/* =========================================
+   RWD 響應式設計 (手機與平板版面)
+   ========================================= */
+
+@media screen and (max-width: 768px) {
+    
+    /* 1. 調整導覽列：改為上下排列、選單可自動換行 */
+    .navbar {
+        flex-direction: column;
+        padding: 10px 15px;
+    }
+
+    .brand-link {
+        margin-bottom: 10px; /* LOGO 與選單之間留點空隙 */
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap; /* 空間不夠時自動換行 */
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 1rem; /* 手機版字體稍微縮小 */
+    }
+
+    /* 2. 調整上方預留空間：因為導覽列變厚了，內容要再往下推一點 */
+    body {
+        padding-top: 120px; 
+    }
+
+    /* 3. 首頁主視覺文字縮小 */
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* 4. 通用區塊左右留白縮小，爭取更多閱讀空間 */
+    .container {
+        padding: 30px 15px;
+    }
+}
